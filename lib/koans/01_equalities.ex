@@ -10,11 +10,11 @@ defmodule Equalities do
 
   # Replace ___ with the answer to make the koan pass.
   koan "We shall contemplate truth by testing reality, via equality" do
-    assert true == :true
+    assert true == true
   end
 
   koan "Not something is the opposite of it" do
-    assert !true == :false
+    assert !true == false
   end
 
   koan "To understand reality, we must compare our expectations against reality" do
