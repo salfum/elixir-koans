@@ -130,7 +130,9 @@ defmodule GenServers do
 
   koan "Referencing processes by their PID gets old pretty quickly, so let's name them" do
     {:ok, _} = GenServer.start_link(Laptop, "3kr3t!", name: :macbook)
-    assert GenServer.call(:macbook, :name_check) == "Congrats! Your process was successfully named."
+
+    assert GenServer.call(:macbook, :name_check) ==
+             "Congrats! Your process was successfully named."
   end
 
   koan "Our server works but it's pretty ugly to use; so lets use a cleaner interface" do
